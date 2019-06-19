@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+@import "~react-bulma-components/src/index.sass";
+
+@import "./_variables.sass";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
+
+.app {
+  display: grid;
+  height: 100vh;
+
+  grid-template-columns: $main-content-width;
+  grid-auto-rows: $header-height $main-content-height $footer-height;
+  grid-template-areas:
+    "hd"
+    "sd"
+    "mn"
+    "ft";
+
+  @media(min-width: 768px) {
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: $navbar-side-width $main-content-width;
+    grid-auto-rows: $header-height $main-content-height $footer-height;
+    grid-template-areas:
+      "hd hd"
+      "sd mn"
+      "sd ft";
+  }
+}
+
+.header {
+  grid-area: hd;
+  border: solid 1px blue;
+}
+
+.foot {
+  grid-area: ft;
+  background-color: #fafafa;
+  border: solid 1px green;
+}
+
+.main {
+  grid-area: mn;
+  border: solid 1px orange;
+}
+
+.sidebar {
+  grid-area: sd;
+  border: solid 1px red;
+}
+
+/*
+Component styles
+ */
+
+.listed-lists {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 5% auto;
+}
+
+.card {
+  margin: 10px 0;
+}
+
+.list {
+  background-color: white;
+  margin: 5% auto;
+  width: 50%;
+  border: 1px solid #efefef;
+  padding: 20px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 20px 0;
+  // width: 80%;
+  border-bottom: 1px solid #cecece;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  color: #333333;
+
+  input[type=checkbox] {
+    margin-right: 10px;
+    font-size: 30px;
+  }
+
+  input[type=checkbox]:focus {
+    outline: 0;
+  }
+}

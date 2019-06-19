@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Grolist App",
+  "name": "A multi usage real-time list",
   "icons": [
     {
       "src": "favicon.ico",
