@@ -1,4 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Grolist frontend
+This React App is the frontend (GUI) for the [Grolist API](https://github.com/jolbax/grolist-backend#readme) and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+At the time I started this project, I already had applied experience with React. Which means that I already had completed some learning projects like [chat-react](https://github.com/jolbax/chat-react) and [jams-react](https://github.com/jolbax/jams-react)
+
+## Deployment
+Firebase was chosen as hosting platform:
+https://grolist-frontend.firebaseapp.com/
+
+## Built with
+- React - without store management (like Redux)
+- HTML5
+- SCSS/SASS
+- Bulma - [react-bulma-components](https://couds.github.io/react-bulma-components)
+- Authentication via JWT
+- [Axios](https://github.com/axios/axios) - Used instead of the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+
+## Features
+
+* Authentication capabilities using JSON Web Tokens *(work in progress)*
+* CRUD users, lists and list-item.
+* Updated and accessible across users and devices
+* Check/Uncheck list items
+* Add collaborators *(work in progress)*
+* Assigned tasks *(work in progress)*
+* Search *(work in progress)*
+* Task prioritization *(work in progress)*
+
+## Possible enhancements
+* Redux - I would like to manage the state in a "state of the art" way.
+* Responsiveness - There is infinite room for improvement.
+* Real-Time Synchronicity - Propagate state using WebSockets and React Hooks
+* React component testing
+
 
 ## Available Scripts
 
@@ -37,32 +70,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
