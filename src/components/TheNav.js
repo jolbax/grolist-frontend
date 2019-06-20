@@ -25,7 +25,14 @@ function TheNav(props) {
         )}
         <Menu.List.Item>
           {isLoggedIn ? (
-            <NavLink to="/profile">Log out</NavLink>
+            <NavLink
+              onClick={() => {
+                localStorage.clear();
+                window.location.href = "/";
+              }}
+            >
+              Log out
+            </NavLink>
           ) : (
             <NavLink to="/login">Log in</NavLink>
           )}

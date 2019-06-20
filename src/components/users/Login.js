@@ -40,7 +40,7 @@ class Login extends Component {
           localStorage.setItem("auth", resp.data.auth);
           localStorage.setItem("username", resp.data.user.username);
           localStorage.setItem("email", resp.data.user.email);
-          this.props.history.push("/");
+          window.location.href = "/";
         }
       });
     }
