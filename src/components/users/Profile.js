@@ -2,15 +2,16 @@ import React, { Component } from "react";
 import {
   Card,
   Media,
-  Content,
+  Button,
   Image,
   Heading
 } from "react-bulma-components/full";
+import { bold } from "ansi-colors";
 
 class Profile extends Component {
   render() {
     return (
-      <Card>
+      <Card style={{ width: "50%", margin: "5% auto" }}>
         <Card.Content>
           <Media>
             <Media.Item renderAs="figure" position="left">
@@ -22,19 +23,24 @@ class Profile extends Component {
               />
             </Media.Item>
             <Media.Item>
-              <Heading size={4}>John Smith</Heading>
-              <Heading subtitle size={6}>
-                @johnsmith
-              </Heading>
+              <Heading size={4}>{localStorage.getItem("username")}</Heading>
             </Media.Item>
           </Media>
-          <Content>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            nec iaculis mauris. <a>@bulmaio</a>.<a href="#1">#css</a>{" "}
-            <a href="#2">#responsive</a>
-            <br />
-            <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-          </Content>
+          <Media.Item>
+            <Heading subtitle size={6}>
+              <bold style={{ fontWeight: "bold" }}>User name: </bold>{" "}
+              {localStorage.getItem("username")}
+            </Heading>
+            <Heading subtitle size={6}>
+              <bold style={{ fontWeight: "bold" }}>Email: </bold>{" "}
+              {localStorage.getItem("email")}
+            </Heading>
+            <Heading subtitle size={6}>
+              <bold style={{ fontWeight: "bold" }}>Last login: </bold>{" "}
+              <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </Heading>
+            <Button color="link">Reset Password</Button>
+          </Media.Item>
         </Card.Content>
       </Card>
     );

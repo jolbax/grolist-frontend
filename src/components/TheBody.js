@@ -6,6 +6,8 @@ import List from "./lists/List";
 import Landing from "./others/Landing";
 import api from "../helpers/api";
 import { Loader } from "react-bulma-components/full";
+import Signup from "./users/Signup";
+import Login from "./users/Login";
 
 class TheBody extends Component {
   constructor(props) {
@@ -16,13 +18,11 @@ class TheBody extends Component {
   }
 
   updateState() {
-    console.log("updating...");
-
     (async () => {
       try {
         let resp = await api.fetchLists();
         let lists = await resp.data.lists;
-        // console.log(lists);
+        console.log("List fetching successfully");
         this.setState({ lists });
       } catch (err) {
         console.log(err);
@@ -47,7 +47,6 @@ class TheBody extends Component {
             />
           )}
         />
-        <Route exact path="/profile" component={Profile} />
         <Route
           path="/lists/:listId"
           render={props =>
@@ -63,6 +62,9 @@ class TheBody extends Component {
             )
           }
         />
+        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/login" component={Login} />
       </div>
     );
   }

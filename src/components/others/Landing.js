@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import Hero from "react-bulma-components/lib/components/hero";
 import Heading from "react-bulma-components/lib/components/heading";
 import Button from "react-bulma-components/lib/components/button";
+import Section from "react-bulma-components/lib/components/section";
 import Container from "react-bulma-components/lib/components/container";
-import Signup from "../users/Signup";
 
 function Landing(props) {
   return (
@@ -15,9 +15,19 @@ function Landing(props) {
           <Heading subtitle size={3}>
             Start sharing your lists
           </Heading>
-          <Button>
-            <Link to={Signup}>Sign up!</Link>
-          </Button>
+          { localStorage.getItem("token") ?
+          (<Button>
+            <Link to={"/lists"}>Create a new list!</Link>
+          </Button>) :
+          <Section kind="group">
+            <Button>
+              <Link to={"/signup"}>Sign up</Link>
+            </Button>
+            <Button style={{ marginLeft: "5px"}}>
+              <Link to={"/login"}>Log in</Link>
+            </Button>
+          </Section>
+            }
         </Container>
       </Hero.Body>
     </Hero>

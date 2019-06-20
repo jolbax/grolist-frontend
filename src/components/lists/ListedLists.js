@@ -73,7 +73,7 @@ class ListedLists extends Component {
     return (
       <div className="listed-lists">
         <Heading size={2}>Your lists</Heading>
-        <AddList addList={this.addList} userId="1" />
+        <AddList addList={this.addList} />
         {lists ? (
           lists.map(list => (
             <ListCard

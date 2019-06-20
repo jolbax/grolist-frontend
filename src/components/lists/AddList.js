@@ -17,8 +17,7 @@ class AddList extends Component {
 
   componentWillMount() {
     this.setState({
-      title: "",
-      userId: this.props.userId
+      title: ""
     });
   }
 
