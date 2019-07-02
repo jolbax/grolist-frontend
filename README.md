@@ -32,6 +32,11 @@ https://grolist-frontend.firebaseapp.com/
 * Real-Time Synchronicity - Propagate state using WebSockets and React Hooks
 * React component testing
 
+## ToDos
+- [ ] List items order changing
+- [ ] Refresh token after expiration
+- [ ] WebSockets and real-time synchronicity
+
 
 ## Available Scripts
 

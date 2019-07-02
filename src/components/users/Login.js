@@ -37,6 +37,7 @@ class Login extends Component {
 
         if (resp.data.auth === true) {
           localStorage.setItem("token", resp.data.token);
+          localStorage.setItem("refreshToken", resp.data.refreshToken);
           localStorage.setItem("auth", resp.data.auth);
           localStorage.setItem("username", resp.data.user.username);
           localStorage.setItem("email", resp.data.user.email);

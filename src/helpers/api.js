@@ -52,6 +52,9 @@ const api = {
   userLogin(payload) {
     return axios.post(`${API_ENDPOINT}/api/users/log_in`, payload);
   },
+  refreshLogin(payload) {
+    return axios.post(`${API_ENDPOINT}/api/users/token`, payload);
+  },
   createUser(payload) {
     return axios.post(`${API_ENDPOINT}/api/users/create`, payload);
   }

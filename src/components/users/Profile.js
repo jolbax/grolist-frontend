@@ -6,7 +6,6 @@ import {
   Image,
   Heading
 } from "react-bulma-components/full";
-import { bold } from "ansi-colors";
 
 class Profile extends Component {
   render() {
@@ -14,9 +13,8 @@ class Profile extends Component {
       <Card style={{ width: "50%", margin: "5% auto" }}>
         <Card.Content>
           <Media>
-            <Media.Item renderAs="figure" position="left">
+            <Media.Item position="left">
               <Image
-                renderAs="p"
                 size={64}
                 alt="64x64"
                 src="http://bulma.io/images/placeholders/128x128.png"
@@ -28,15 +26,15 @@ class Profile extends Component {
           </Media>
           <Media.Item>
             <Heading subtitle size={6}>
-              <bold style={{ fontWeight: "bold" }}>User name: </bold>{" "}
+              <span style={{ fontWeight: "span" }}>User name: </span>{" "}
               {localStorage.getItem("username")}
             </Heading>
             <Heading subtitle size={6}>
-              <bold style={{ fontWeight: "bold" }}>Email: </bold>{" "}
+              <span style={{ fontWeight: "span" }}>Email: </span>{" "}
               {localStorage.getItem("email")}
             </Heading>
             <Heading subtitle size={6}>
-              <bold style={{ fontWeight: "bold" }}>Last login: </bold>{" "}
+              <span style={{ fontWeight: "span" }}>Last login: </span>{" "}
               <time dateTime="2016-1-1">11:09 PM - 1 Jan 2016</time>
             </Heading>
             <Button color="link">Reset Password</Button>
